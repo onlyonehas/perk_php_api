@@ -1,0 +1,25 @@
+version: '3'
+services:
+  web:
+    image: php:7.2.2-apache
+    container_name: perk_php_web
+    depends_on:
+      - db
+    volumes:
+      - ./api:/usr/local/etc/php/
+    ports:
+      - "8100:80"
+    stdin_open: true
+    tty: true
+
+  db:
+    image: mysql
+    container_name: perk_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: discounts
+      MYSQL_USER: perk_user
+      MYSQL_PASSWORD: perk321
+    ports:
+    - "9906:3306"
+
