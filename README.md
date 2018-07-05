@@ -2,11 +2,11 @@
 
 ## TO INSTALL
 
-###Database
+### Database
 >Import the coupons.sql file in your database
 >Configure the db params in the config/Database.php file to your own
 
-###RUN Server
+### RUN Server
 >Alternatively run docker-compose up -d
 	Which uses port  :9906 
     private $db_name = 'discounts';
@@ -16,8 +16,8 @@
 >IN POSTMAN RUN GET http://localhost:8100/api/getcoupons
 Alternative can RUN php -S localhost:80 inside the directory eg http://localhost:8100/api/getcoupons.php
 
-###Aunthentication
-To request a token 
+### Aunthentication
+>To request a token 
 set Secret in header use key: secret value: secretcode
 this will return a token
 add the token along with the secret in headers
